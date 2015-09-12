@@ -2,3 +2,29 @@
  * Gender equality modular styles
  * @author Nik, Jenny, Jack, Kabu
  */
+
+form{
+    @at-root{
+        fieldset{
+            margin: 0 0 2rem;
+            padding: 0;
+            border: 0;
+        }
+        label,
+        input{
+            display: block;
+        }
+        label{
+            margin-bottom: 1rem;
+        }
+        input,
+        textarea{
+            width: 100%;
+            padding: 2rem;
+            border: .1rem solid getcolor('muted');
+        }
+        textarea{
+            min-height: 15rem;
+        }
+    }
+}
