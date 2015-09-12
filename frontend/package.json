@@ -1,13 +1,13 @@
 {
-    "name": "meatcheckr",
+    "name": "Gender Equality Hackathon",
     "version": "0.0.1",
-    "description": "An autocomplete script that returns when it's safe to eat meat you just opened.",
-    "author": "Jack Armley",
+    "description": "Proof of Concept for Gender Equality Hackathon",
+    "author": "Jenny, Kabu, Nik, Jack",
     "private": false,
     "licence": "MIT",
     "repository": {
         "type": "git",
-        "url": "https://github.com/jackarmley/meatcheckr"
+        "url": "https://github.com/begleynk/gender-equality-hackathon"
     },
     "dependencies": {
         "gulp": "3.9.0",

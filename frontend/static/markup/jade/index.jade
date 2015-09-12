@@ -1,28 +1,4 @@
-doctype html
-meta(charset="utf-8")
-html
-    head
-        title= locals.title
-        link(rel="stylesheet" href="./static/styles/styles.css")
-        meta(name='viewport', content='width=device-width,scale=1')
-    body
-        main(role="main").meatcheckr
-            header(role="banner").meatcheckr-header
-                h1.meatcheckr-logo
-                    -for(var i=0;i<locals.title.length;i++)
-                        span= locals.title[i]
-                .meatcheckr-headerillu
-            section.meatcheckr-form
-                form
-                    label(for="meatcheckr").
-                        I've just opened some meat. It's&hellip;
-                    input(type="search" id="meatcheckr" placeholder="Dang, I just opened some...")
-            footer.meatcheckr-footer(role="contentinfo")
-                p
-                    != locals.tagline
-                    | . Information (roughly!) from
-                    | &nbsp;
-                    a(href="http://www.foodsafety.gov/keep/charts/storagetimes.html") foodsafety.gov
-        script(src="./static/scripts/meat-suggestions.js")
-        script(src="./static/scripts/meatcheckr.js")
-        script(src="./static/scripts/app.js")
+extends templates/master
+
+block content
+    h2= locals.tagline

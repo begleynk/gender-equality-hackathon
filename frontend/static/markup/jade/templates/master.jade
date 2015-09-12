@@ -1,0 +1,13 @@
+doctype html
+meta(charset="utf-8")
+html
+    head
+        title= locals.title
+        link(rel="stylesheet" href="./static/styles/styles.css")
+        meta(name='viewport', content='width=device-width,scale=1')
+    body
+        header(role="banner")
+            h1=locals.title
+            p=locals.tagline
+        section.page-wrapper
+            block content
