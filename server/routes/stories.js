@@ -15,7 +15,13 @@ router.get('/:guid', function(req, res, next) {
 router.post('/', function(req, res) {
   database.saveNewStory(story, function(guid, error) {
     res.send({ guid: guid });
-  }
+  });
+});
+
+router.get("/", function(req, res) {
+  database.allStories(function(stories) {
+    res.send(stories);
+  });
 });
 
 module.exports = router;

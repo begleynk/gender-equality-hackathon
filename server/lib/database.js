@@ -1,4 +1,5 @@
 var fs = require('fs');
+var async = require('async');
 
 var Database = {
 
@@ -12,7 +13,6 @@ var Database = {
         return callback(guid, null);
       }
     }); 
-
   },
 
   fetchStory: function(guid, callback) {
@@ -22,6 +22,23 @@ var Database = {
       } else {
         return callback(JSON.parse(raw_story), null);
       }
+    });
+  },
+
+  allStories: function(callback) {
+    fs.readdir('./database/', function(err, files) { 
+      var filtered = files.filter(function(name) { return name !== ".DS_Store" });
+
+
+      var cb = function(story) {
+        return story;
+      }
+
+      async.map(filtered, function(guid) {
+        Database.fetchStory(guid, cb)
+      }, function(err, stories) {
+        return callback(stories);
+      });
     });
   },
 
