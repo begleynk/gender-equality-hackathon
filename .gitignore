@@ -4,6 +4,5 @@ db.json
 *.log
 *.css
 *.css.map
-node_modules/
-public/
+frontend/node_modules/
 .deploy*/
