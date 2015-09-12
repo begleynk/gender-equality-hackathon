@@ -8,12 +8,16 @@
 // @type {Color}
 $default: #333;
 $grey: #999;
+$sunrise: #ffa910;
 
 // Tie colours to map
 // @type {Map}
 $colours:(
     base: $default,
-    muted: $grey
+    muted: $grey,
+    key: $sunrise,
+    pullpanel: darken($sunrise,10%),
+    light: #fff
 );
 
 // Color getter

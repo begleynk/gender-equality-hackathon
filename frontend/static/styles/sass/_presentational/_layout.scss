@@ -2,9 +2,40 @@
  * Gender equality layout styles
  * @author Nik, Jenny, Jack, Kabu
  */
-.site-wrapper{
+html{
+    background: getcolor('light');
+}
+.layoutwrap{
     width: 96%;
     max-width: 60rem;
     margin: auto;
-    padding: 2rem;
+    padding: 4rem 2rem;
+}
+.site-header{
+    margin-bottom: 2rem;
+    background: getcolor('key');
+    text-align: center;
+    @at-root{
+        .site-logo{
+            width: 20rem;
+            height: 20rem;
+            margin: auto;
+            overflow: hidden;
+            background: url('../images/logo.png') top left/contain no-repeat;
+            text-indent: 110%;
+            white-space: nowrap;
+        }
+        .site-tagline{
+            margin: 0;
+            color: getcolor('light');
+            font-size: 1.2em;
+        }
+    }
+}
+.page-wrapper{
+    .layoutwrap{
+        & > :first-child{
+            margin-top: 0;
+        }
+    }
 }

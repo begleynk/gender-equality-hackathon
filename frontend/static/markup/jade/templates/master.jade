@@ -7,8 +7,10 @@ html
         meta(name='viewport', content='width=device-width,scale=1')
     body
         .site-wrapper
-            header(role="banner")
-                h1=locals.title
-                p=locals.tagline
+            header.site-header(role="banner")
+                .layoutwrap
+                    h1.site-logo=locals.title
+                    p.site-tagline=locals.tagline
             section.page-wrapper
-                block content
+                .layoutwrap
+                    block content
