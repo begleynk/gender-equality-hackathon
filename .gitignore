@@ -5,4 +5,5 @@ db.json
 *.css
 *.css.map
 frontend/node_modules/
+server/node_modules/
 .deploy*/
