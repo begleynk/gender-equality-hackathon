@@ -6,4 +6,5 @@ db.json
 *.css.map
 frontend/node_modules/
 server/node_modules/
+**/database/
 .deploy*/
