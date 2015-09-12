@@ -6,22 +6,14 @@
 
 // Set some colours
 // @type {Color}
-$pinksteak: #D55663;
-$venison: #272324;
-$baconrind: #FBD3CD;
-$dripping: #fff;
-$butchershopblue: #6EABFF;
+$default: #333;
+$grey: #999;
 
 // Tie colours to map
 // @type {Map}
 $colours:(
-    base: $venison,
-    light: $baconrind,
-    highlight: $baconrind,
-    key: $pinksteak,
-    bg: $venison,
-    white: $dripping,
-    blue: $butchershopblue
+    base: $default,
+    muted: $grey
 );
 
 // Color getter
