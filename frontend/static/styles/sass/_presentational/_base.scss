@@ -2,3 +2,12 @@
  * Gender equality base styles
  * @author Nik, Jenny, Jack, Kabu
  */
+
+@import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700');
+html{
+    font-size: 62.5%;
+}
+body{
+    color: getcolor('base');
+    font: normal normal 160%/1.6 'Montserrat',sans-serif;
+}
