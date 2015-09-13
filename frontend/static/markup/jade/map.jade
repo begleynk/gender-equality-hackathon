@@ -7,10 +7,9 @@ html
         meta(name='viewport', content='width=device-width,scale=1')
     body
         .site-wrapper
-            header.site-header(role="banner")
+            header.site-header.site-header--compact(role="banner")
                 .layoutwrap
-                    h1.site-logo=locals.title
-                    p.site-tagline=locals.tagline
+                    h1.site-logo: a(href='./form.html')= locals.title
             #map
             footer.site-footer(role="banner")
                 .layoutwrap

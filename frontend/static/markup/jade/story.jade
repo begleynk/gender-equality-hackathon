@@ -1,8 +1,25 @@
 extends templates/master
 
 append content
-  h2#location
-  p#text
-  p#view
+    .centered
+        h2 My story
+    dl.story
+        dt At this place&hellip;
+        dd#location
+        dt I experienced&hellip;
+        dd#text
+        dt Views and advice I'd like to share&hellip;
+        dd#view
+    .shares
+        .share
+            h3 See all the stories
+            p: a.fontawesome-suitcase(href='./map.html') View the story map
+        .share
+            h3 Share your story
+            ul
+                li: a.fontawesome-twitter(href="") Twitter
+                li: a.fontawesome-facebook(href="") Facebook
 
+
+append scripts
   script(src="./static/scripts/fetch_story.js")

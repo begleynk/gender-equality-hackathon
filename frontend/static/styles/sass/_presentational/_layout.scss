@@ -4,10 +4,15 @@
  */
 html{
     background:
-        linear-gradient(to bottom, fade-out(black,0), fade-out(black,1)) top left/100% 30rem repeat-x,
-        url('../images/bg.jpg') fixed
+        linear-gradient(to bottom, fade-out(black,0), fade-out(black,1)) top left/100% 20rem repeat-x,
+        url('../images/bg.jpg') top left/10rem 10rem fixed
         getcolor('brandbright');
     background-blend-mode: overlay;
+    @include mq{
+        background-size:
+            100% 20rem,
+            auto;
+    }
 }
 body{
     @include brandstripe;
@@ -37,9 +42,16 @@ body{
             background: url('../images/logo.png') top left/contain no-repeat;
             text-indent: 110%;
             white-space: nowrap;
+            a{
+                display: block;
+                height: 15rem;
+            }
             @include mq{
                 width: 20rem;
                 height: 20rem;
+                a{
+                    height: 20rem;
+                }
             }
         }
         .site-tagline{
@@ -47,6 +59,36 @@ body{
             color: getcolor('light');
             @include mq{
                 font-size: 1.2em;
+            }
+        }
+    }
+    &--compact{
+        .layoutwrap{
+            padding:{
+                top: 1rem;
+                bottom: 1rem;
+            };
+        }
+        .site-logo{
+            width: 10rem;
+            height: 10rem;
+            a{
+                height: 10rem;
+            }
+        }
+        @include mq{
+            .layoutwrap{
+                padding:{
+                    top: 1rem;
+                    bottom: 1rem;
+                };
+            }
+            .site-logo{
+                width: 10rem;
+                height: 10rem;
+                a{
+                    height: 10rem;
+                }
             }
         }
     }
@@ -67,5 +109,40 @@ body{
         margin: 0;
         color: getcolor('light');
         text-align: center;
+    }
+}
+
+/**
+ * Sharing
+ */
+.story{
+    margin-bottom: 2rem;
+    @include mq{
+        margin-bottom: 4rem;
+    }
+}
+.shares{
+    margin-right: -2rem;
+    margin-left: -2rem;
+    padding: 2rem;
+    border-top: .5rem solid getcolor('brandbright');
+    .share{
+        width: 100%;
+        h3{
+            margin-top: 0;
+        }
+        ul{
+            padding-left: 0;
+            list-style: none;
+        }
+    }
+    @include mq{
+        display: flex;
+        .share{
+            text-align: center;
+            &:first-child{
+                border-right: .1rem solid getcolor('brandbright');
+            }
+        }
     }
 }

@@ -13,16 +13,19 @@ mixin field(title,id,type)
 
 append content
     p.centered.
-        Share your story. Help the world understand.
+        Anonymously share your story. Help the world understand.
     form.storyform
         h2 My story
         fieldset.storyform-chapter
             legend Story chunk
             +field('At this place','location')
             +field('I experienced','text', 'textarea')
-            +field('What I think about gender equality', 'view','textarea')
+            +field('Views and advice I\'d like to share', 'view','textarea')
             a.storyform-addchapter.btn(role='button' href='#')
-                span add another chapter
+                span.fontawesome-book add another chapter
     .storyform-actions
         button.btn.btn-prominent(type='submit', id='submit') Submit your story
+append scripts
+    script(src="./static/scripts/form.js")
+    script(src='./static/scripts/app.js')
 

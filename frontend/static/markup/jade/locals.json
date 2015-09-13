@@ -1,4 +1,22 @@
 {
     "title" : "CrowdStory",
-    "tagline" : "A framework for qualitive story and solution sharing on Global Goals: Gender Equality edition."
+    "tagline" : "A framework for qualitative story and solution sharing on Global Goals: Gender Equality edition.",
+    "fields" : {
+        "location" : {
+            "id" : "location",
+            "label" : "At this place",
+            "type" : "text"
+        },
+        "text" : {
+            "id" : "text",
+            "label" : "I experienced",
+            "type" : "textarea"
+        },
+        "view" : {
+            "id" : "location",
+            "label" : "What I think about gender equality",
+            "type" : "textarea"
+        }
+    },
+    "share" : "twitter, facebook"
 }

@@ -4,6 +4,8 @@
  */
 
 @import url('https://fonts.googleapis.com/css?family=Open+Sans|Montserrat:400,700');
+@import url('http://weloveiconfonts.com/api/?family=fontawesome');
+
 html{
     font-size: 62.5%;
 }
@@ -25,6 +27,13 @@ a{
  */
 h2,h3{
     color: getcolor('branddark');
+}
+
+dt{
+    color: getcolor('branddark');
+}
+dd{
+    margin: 0 0 1rem;
 }
 
 /**

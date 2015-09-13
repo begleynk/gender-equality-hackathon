@@ -9,7 +9,7 @@ html
         .site-wrapper
             header.site-header(role="banner")
                 .layoutwrap
-                    h1.site-logo=locals.title
+                    h1.site-logo: a(href='./form.html')= locals.title
                     p.site-tagline=locals.tagline
             main(role="main").page-wrapper
                 .layoutwrap
@@ -19,5 +19,4 @@ html
                     p.
                         A collaborative project that was part of the
                         Hackathon for Gender Equality 2015
-        script(src="./static/scripts/form.js")
-        script(src='./static/scripts/app.js')
+        block scripts

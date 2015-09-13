@@ -10,16 +10,36 @@
     <div class="site-wrapper">
       <header role="banner" class="site-header">
         <div class="layoutwrap">
-          <h1 class="site-logo">CrowdStory</h1>
-          <p class="site-tagline">A framework for qualitive story and solution sharing on Global Goals: Gender Equality edition.</p>
+          <h1 class="site-logo"><a href="./form.html">CrowdStory</a></h1>
+          <p class="site-tagline">A framework for qualitative story and solution sharing on Global Goals: Gender Equality edition.</p>
         </div>
       </header>
       <main role="main" class="page-wrapper">
         <div class="layoutwrap">
-          <h2 id="location"></h2>
-          <p id="text"></p>
-          <p id="view"></p>
-          <script src="./static/scripts/fetch_story.js"></script>
+          <div class="centered">
+            <h2>My story</h2>
+          </div>
+          <dl class="story">
+            <dt>At this place&hellip;</dt>
+            <dd id="location"></dd>
+            <dt>I experienced&hellip;</dt>
+            <dd id="text"></dd>
+            <dt>Views and advice I'd like to share&hellip;</dt>
+            <dd id="view"></dd>
+          </dl>
+          <div class="shares">
+            <div class="share">
+              <h3>See all the stories</h3>
+              <p><a href="./map.html" class="fontawesome-suitcase">View the story map</a></p>
+            </div>
+            <div class="share">
+              <h3>Share your story</h3>
+              <ul>
+                <li><a href="" class="fontawesome-twitter">Twitter</a></li>
+                <li><a href="" class="fontawesome-facebook">Facebook</a></li>
+              </ul>
+            </div>
+          </div>
         </div>
       </main>
       <footer role="banner" class="site-footer">
@@ -31,7 +51,6 @@
         </div>
       </footer>
     </div>
-    <script src="./static/scripts/form.js"></script>
-    <script src="./static/scripts/app.js"></script>
+    <script src="./static/scripts/fetch_story.js"></script>
   </body>
 </html>
