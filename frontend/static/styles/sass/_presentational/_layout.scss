@@ -3,39 +3,61 @@
  * @author Nik, Jenny, Jack, Kabu
  */
 html{
-    background: getcolor('light');
+    background: url('../images/bg.jpg') fixed getcolor('key');
 }
 .layoutwrap{
-    width: 96%;
+    width: auto;
     max-width: 60rem;
     margin: auto;
-    padding: 4rem 2rem;
+    padding: 2rem;
+    @include mq{
+        width: 90%;
+        padding:{
+            top: 4rem;
+            bottom: 4rem;
+        };
+    }
 }
 .site-header{
-    margin-bottom: 2rem;
-    background: getcolor('key');
     text-align: center;
     @at-root{
         .site-logo{
-            width: 20rem;
-            height: 20rem;
+            width: 15rem;
+            height: 15rem;
             margin: auto;
             overflow: hidden;
             background: url('../images/logo.png') top left/contain no-repeat;
             text-indent: 110%;
             white-space: nowrap;
+            @include mq{
+                width: 20rem;
+                height: 20rem;
+            }
         }
         .site-tagline{
             margin: 0;
             color: getcolor('light');
-            font-size: 1.2em;
+            @include mq{
+                font-size: 1.2em;
+            }
         }
     }
 }
 .page-wrapper{
     .layoutwrap{
+        background-color: getcolor('light');
+        @include mq{
+            border-radius: 2rem;
+        }
         & > :first-child{
             margin-top: 0;
         }
+    }
+}
+.site-footer{
+    p{
+        margin: 0;
+        color: getcolor('light');
+        text-align: center;
     }
 }

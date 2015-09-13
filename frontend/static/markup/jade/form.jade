@@ -14,13 +14,16 @@ mixin field(title,type)
             input(type=type)
 
 append content
-    h2 Submit my story
+    h2 Tell your story
     p.
         Intro text
     form.storyform
-        p Each step
-        +field('My location')
-        +field('Text')
-        +field('View','textarea')
-        button(type='submit') Submit my story
+        h3 Right now I'm&hellip;
+        fieldset
+            legend Story chunk
+            +field('My location')
+            +field('Text')
+            +field('View','textarea')
+            a(role='button' href='#') Add another chapter
+        button(type='submit') Submit your story
 

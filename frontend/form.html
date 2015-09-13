@@ -14,28 +14,39 @@
           <p class="site-tagline">A framework for qualitive story and solution sharing on Global Goals: Gender Equality edition.</p>
         </div>
       </header>
-      <section class="page-wrapper">
+      <main role="main" class="page-wrapper">
         <div class="layoutwrap">
-          <h2>Submit my story</h2>
+          <h2>Tell your story</h2>
           <p>Intro text</p>
           <form class="storyform">
-            <p>Each step</p>
+            <h3>Right now I'm&hellip;</h3>
             <fieldset>
-              <label for="my-location">My location</label>
-              <input type="text" id="my-location"/>
+              <legend>Story chunk</legend>
+              <fieldset>
+                <label for="my-location">My location</label>
+                <input type="text" id="my-location"/>
+              </fieldset>
+              <fieldset>
+                <label for="text">Text</label>
+                <input type="text" id="text"/>
+              </fieldset>
+              <fieldset>
+                <label for="view">View</label>
+                <textarea id="view"></textarea>
+              </fieldset><a role="button" href="#">Add another chapter</a>
             </fieldset>
-            <fieldset>
-              <label for="text">Text</label>
-              <input type="text" id="text"/>
-            </fieldset>
-            <fieldset>
-              <label for="view">View</label>
-              <textarea id="view"></textarea>
-            </fieldset>
-            <button type="submit">Submit my story</button>
+            <button type="submit">Submit your story</button>
           </form>
         </div>
-      </section>
+      </main>
+      <footer role="banner" class="site-footer">
+        <div class="layoutwrap">
+          <p>
+            A collaborative project that was part of the
+            Hackathon for Gender Equality 2015
+          </p>
+        </div>
+      </footer>
     </div>
   </body>
 </html>

@@ -25,3 +25,16 @@ $colours:(
 @function getcolor($value){
     @return map-get($colours,$value);
 }
+
+// Media queries
+// @type {Map}
+$mq:(
+     malva: (450/16)+'em' // from mobiles up (an african dessert)
+);
+
+@mixin mq($size: malva){
+    $query: map-get($mq,$size);
+    @media screen and (min-width: $query){
+        @content;
+    }
+}
