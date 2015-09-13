@@ -118,17 +118,14 @@ body{
 .story{
     margin-bottom: 2rem;
     .fontawesome-link{
-        display: none;
+        + input{
+            display: inline-block;
+            max-width: 100%;
+            width: calc(100% - 4rem);
+        }
     }
     @include mq{
         margin-bottom: 4rem;
-        .fontawesome-link{
-            display: inline-block;
-            + input{
-                display: inline-block;
-                width: auto;
-            }
-        }
     }
 }
 .shares{
