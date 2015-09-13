@@ -14,14 +14,14 @@ mixin field(title,type)
             input(type=type)
 
 append content
-    h2 Tell your story
     p.
-        Intro text
+        A framework for qualitive story and solution
+        sharing on Global Goals: Gender Equality edition.
     form.storyform
-        h3 Right now I'm&hellip;
+        h2 Make my story
         fieldset.storyform-chapter
             legend Story chunk
-            +field('My location')
+            +field('Location')
             +field('Text')
             +field('View','textarea')
             a.storyform-addchapter.btn(role='button' href='#')
