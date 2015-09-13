@@ -2,7 +2,7 @@ var serverURL = "http://localhost:4567"
 
 var getFormInJson = function() {
   return {
-    "location": document.getElementById("my-location").value,
+    "location": document.getElementById("location").value,
     "text": document.getElementById("text").value,
     "view": document.getElementById("view").value,
   }

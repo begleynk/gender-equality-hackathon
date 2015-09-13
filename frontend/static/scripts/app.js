@@ -1,12 +1,18 @@
 /**
- * Demo, bro
+ * Gender equality hack scripts
+ * @author Nik, Jenny, Jack, Kabu
  */
 
-var autoComp = new meatcheckr(
-    '#meatcheckr',
-    {
-        data: suggestions,
-        appendMenuToElement: '.meatcheckr-form',
-        limit: 1
-    }
-);
+function storyform(){
+    self = this;
+    self.init();
+}
+
+storyform.prototype.init = function(){
+    console.log(self);
+};
+storyform.prototype.addStory = function(){
+
+};
+
+var mystory = new storyform();

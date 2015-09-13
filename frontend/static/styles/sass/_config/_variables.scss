@@ -6,16 +6,18 @@
 
 // Set some colours
 // @type {Color}
-$default: #333;
+$default: #003636;
 $grey: #999;
 $sunrise: #ffa910;
+$aubergine: #e9158b;
 
 // Tie colours to map
 // @type {Map}
 $colours:(
     base: $default,
     muted: $grey,
-    key: $sunrise,
+    brandbright: $sunrise,
+    branddark: $aubergine,
     pullpanel: darken($sunrise,10%),
     light: #fff
 );
@@ -25,3 +27,9 @@ $colours:(
 @function getcolor($value){
     @return map-get($colours,$value);
 }
+
+// Media queries
+// @type {Map}
+$mq:(
+     malva: (450/16)+'em' // from mobiles up (an african dessert)
+);

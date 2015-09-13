@@ -14,14 +14,18 @@ mixin field(title,type)
             input(type=type)
 
 append content
-    h2 Submit my story
     p.
-        Intro text
+        A framework for qualitive story and solution
+        sharing on Global Goals: Gender Equality edition.
     form.storyform
-        p Each step
-        +field('My location')
-        +field('Text')
-        +field('View','textarea')
-    button(type='submit', id='submit') Submit my story
-
+        h2 Make my story
+        fieldset.storyform-chapter
+            legend Story chunk
+            +field('Location')
+            +field('Text', 'textarea')
+            +field('View','textarea')
+            a.storyform-addchapter.btn(role='button' href='#')
+                span add another chapter
+    .storyform-actions
+        button.btn.btn-prominent(type='submit', id='submit') Submit your story
 

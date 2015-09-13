@@ -2,7 +2,7 @@
 <meta charset="utf-8">
 <html>
   <head>
-    <title>My Story</title>
+    <title>CrowdStory</title>
     <link rel="stylesheet" href="./static/styles/styles.css">
     <meta name="viewport" content="width=device-width,scale=1">
   </head>
@@ -10,19 +10,28 @@
     <div class="site-wrapper">
       <header role="banner" class="site-header">
         <div class="layoutwrap">
-          <h1 class="site-logo">My Story</h1>
+          <h1 class="site-logo">CrowdStory</h1>
           <p class="site-tagline">A framework for qualitive story and solution sharing on Global Goals: Gender Equality edition.</p>
         </div>
       </header>
-      <section class="page-wrapper">
+      <main role="main" class="page-wrapper">
         <div class="layoutwrap">
           <h2 id="location"></h2>
           <p id="text"></p>
           <p id="view"></p>
           <script src="./static/scripts/fetch_story.js"></script>
         </div>
-      </section>
+      </main>
+      <footer role="banner" class="site-footer">
+        <div class="layoutwrap">
+          <p>
+            A collaborative project that was part of the
+            Hackathon for Gender Equality 2015
+          </p>
+        </div>
+      </footer>
     </div>
     <script src="./static/scripts/form.js"></script>
+    <script src="./static/scripts/app.js"></script>
   </body>
 </html>
