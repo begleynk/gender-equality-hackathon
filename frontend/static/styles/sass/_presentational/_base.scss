@@ -21,6 +21,13 @@ a{
 }
 
 /**
+ * Headings
+ */
+h2,h3{
+    color: getcolor('branddark');
+}
+
+/**
  * Forms
  */
 form{
