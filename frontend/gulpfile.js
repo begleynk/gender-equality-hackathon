@@ -62,6 +62,7 @@ gulp.task('server', function(){
 
 // Watch
 gulp.task('watch',function(){
+    gulp.watch(assets.scripts + '**/*.js',['markup']);
     gulp.watch(assets.styles + '**/*.scss',['styles']);
     gulp.watch(assets.markup + '**/*.jade',['markup']);
 });

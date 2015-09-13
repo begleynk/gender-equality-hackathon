@@ -1,6 +1,19 @@
 require 'sinatra'
+require 'sinatra/cross_origin'
 require 'json'
 require 'securerandom'
+
+configure do
+  enable :cross_origin
+end
+
+options "*" do
+  response.headers["Allow"] = "HEAD,GET,PUT,POST,DELETE,OPTIONS"
+
+  response.headers["Access-Control-Allow-Headers"] = "X-Requested-With, X-HTTP-Method-Override, Content-Type, Cache-Control, Accept"
+
+  200
+end
 
 post '/stories' do
   params = JSON.parse(request.env["rack.input"].read)
