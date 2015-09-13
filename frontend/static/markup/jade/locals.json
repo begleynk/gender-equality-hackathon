@@ -18,5 +18,5 @@
             "type" : "textarea"
         }
     },
-    "share" : "twitter, facebook"
+    "share" : ["twitter, facebook"]
 }

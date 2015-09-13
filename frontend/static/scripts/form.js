@@ -25,7 +25,7 @@ var postJsonToBackend = function(story, cb) {
 }
 
 var submitForm = function(event) {
-  var json = getFormInJson(); 
+  var json = getFormInJson();
   postJsonToBackend(json, function(response) {
     console.log(response);
     window.location.replace("http://localhost:3000/story.html?id=" + response.id);
