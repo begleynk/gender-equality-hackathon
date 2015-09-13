@@ -1,8 +1,6 @@
 extends templates/master
 
-mixin field(title,type)
-
-    -var id = title.replace(' ','-').toLowerCase();
+mixin field(title,id,type)
     -var type = type || 'text';
     fieldset
         label(for=id)= title
@@ -14,16 +12,15 @@ mixin field(title,type)
             input(type=type)
 
 append content
-    p.
-        A framework for qualitive story and solution
-        sharing on Global Goals: Gender Equality edition.
+    p.centered.
+        Share your story. Help the world understand.
     form.storyform
-        h2 Make my story
+        h2 My story
         fieldset.storyform-chapter
             legend Story chunk
-            +field('Location')
-            +field('Text', 'textarea')
-            +field('View','textarea')
+            +field('At this place','location')
+            +field('I experienced','text', 'textarea')
+            +field('What I think about gender equality', 'view','textarea')
             a.storyform-addchapter.btn(role='button' href='#')
                 span add another chapter
     .storyform-actions
