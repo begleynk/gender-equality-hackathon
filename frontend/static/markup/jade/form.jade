@@ -1,8 +1,6 @@
 extends templates/master
 
-mixin field(title,type)
-
-    -var id = title.replace(' ','-').toLowerCase();
+mixin field(title,id,type)
     -var type = type || 'text';
     fieldset
         label(for=id)= title
@@ -21,9 +19,9 @@ append content
         h2 Make my story
         fieldset.storyform-chapter
             legend Story chunk
-            +field('Location')
-            +field('Text', 'textarea')
-            +field('View','textarea')
+            +field('At this place','location')
+            +field('I experienced','text', 'textarea')
+            +field('What I think about gender equality', 'view','textarea')
             a.storyform-addchapter.btn(role='button' href='#')
                 span add another chapter
     .storyform-actions
