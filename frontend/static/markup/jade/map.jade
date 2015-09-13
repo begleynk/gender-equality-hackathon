@@ -1,0 +1,24 @@
+doctype html
+meta(charset="utf-8")
+html
+    head
+        title= locals.title
+        link(rel="stylesheet" href="./static/styles/styles.css")
+        meta(name='viewport', content='width=device-width,scale=1')
+    body
+        .site-wrapper
+            header.site-header(role="banner")
+                .layoutwrap
+                    h1.site-logo=locals.title
+                    p.site-tagline=locals.tagline
+            #map
+            footer.site-footer(role="banner")
+                .layoutwrap
+                    p.
+                        A collaborative project that was part of the
+                        Hackathon for Gender Equality 2015
+
+
+    script(src="./static/scripts/google_maps.js")
+    script(src="./static/scripts/gmaps.js")
+    script(src="./static/scripts/map.js")
