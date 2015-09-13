@@ -3,28 +3,45 @@
  * @author Nik, Jenny, Jack, Kabu
  */
 
-form{
-    @at-root{
-        fieldset{
-            margin: 0 0 2rem;
-            padding: 0;
-            border: 0;
+/**
+ * Buttons
+ */
+
+.btn{
+    display: inline-block;
+    border: none;
+    padding: 1rem;
+    border-radius: .5rem;
+    background: getcolor('brandbright');
+    color: getcolor('base');
+    text-align: center;
+    &-prominent{
+        padding: 2rem;
+        background: getcolor('branddark');
+        color: getcolor('light');
+    }
+}
+a.btn{
+    text-decoration: none;
+}
+
+/**
+ * Story form
+ * specific styles
+ */
+.storyform{
+    &-addchapter{
+        display: flex;
+        width: 10rem;
+        height: 10rem;
+        margin: auto;
+        border-radius: 100%;
+        line-height: 1.2;
+        span{
+            margin: auto;
         }
-        label,
-        input{
-            display: block;
-        }
-        label{
-            margin-bottom: 1rem;
-        }
-        input,
-        textarea{
-            width: 100%;
-            padding: 2rem;
-            border: .1rem solid getcolor('muted');
-        }
-        textarea{
-            min-height: 15rem;
-        }
+    }
+    &-actions{
+        text-align: center;
     }
 }

@@ -3,9 +3,17 @@
  * @author Nik, Jenny, Jack, Kabu
  */
 html{
-    background: url('../images/bg.jpg') fixed getcolor('key');
+    background:
+        linear-gradient(to bottom, fade-out(black,0), fade-out(black,1)) top left/100% 30rem repeat-x,
+        url('../images/bg.jpg') fixed
+        getcolor('brandbright');
+    background-blend-mode: overlay;
+}
+body{
+    @include brandstripe;
 }
 .layoutwrap{
+    position: relative;
     width: auto;
     max-width: 60rem;
     margin: auto;
@@ -47,7 +55,7 @@ html{
     .layoutwrap{
         background-color: getcolor('light');
         @include mq{
-            border-radius: 2rem;
+            border-radius: .5rem;
         }
         & > :first-child{
             margin-top: 0;

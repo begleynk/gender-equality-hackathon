@@ -3,3 +3,37 @@
 //// mixins
 //// @author Nik, Jenny, Jack, Kabu
 ////
+
+/// Brand stripe
+@mixin brandstripe{
+    &:before{
+        content:' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: .5rem;
+        background:
+            linear-gradient(
+                to right,
+                getcolor('brandbright') 0,
+                getcolor('brandbright') 2rem,
+                getcolor('branddark') 2rem,
+                getcolor('branddark') 4rem,
+                getcolor('light') 4rem
+            )
+            top left/6rem 100% repeat-x
+            getcolor('brandbright')
+        ;
+    }
+}
+
+/// Media query
+/// @param {String} $size - Media query keyword, from $mq map
+@mixin mq($size: malva){
+    $query: map-get($mq,$size);
+    @media screen and (min-width: $query){
+        @content;
+    }
+}

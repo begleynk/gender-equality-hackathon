@@ -6,16 +6,18 @@
 
 // Set some colours
 // @type {Color}
-$default: #333;
+$default: #003636;
 $grey: #999;
 $sunrise: #ffa910;
+$aubergine: #e9158b;
 
 // Tie colours to map
 // @type {Map}
 $colours:(
     base: $default,
     muted: $grey,
-    key: $sunrise,
+    brandbright: $sunrise,
+    branddark: $aubergine,
     pullpanel: darken($sunrise,10%),
     light: #fff
 );
@@ -31,10 +33,3 @@ $colours:(
 $mq:(
      malva: (450/16)+'em' // from mobiles up (an african dessert)
 );
-
-@mixin mq($size: malva){
-    $query: map-get($mq,$size);
-    @media screen and (min-width: $query){
-        @content;
-    }
-}
