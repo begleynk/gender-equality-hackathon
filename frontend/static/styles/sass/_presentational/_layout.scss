@@ -117,14 +117,24 @@ body{
  */
 .story{
     margin-bottom: 2rem;
+    .fontawesome-link{
+        display: none;
+    }
     @include mq{
         margin-bottom: 4rem;
+        .fontawesome-link{
+            display: inline-block;
+            + input{
+                display: inline-block;
+                width: auto;
+            }
+        }
     }
 }
 .shares{
     margin-right: -2rem;
     margin-left: -2rem;
-    padding: 2rem;
+    padding: 2rem 2rem 0;
     border-top: .5rem solid getcolor('brandbright');
     .share{
         width: 100%;
